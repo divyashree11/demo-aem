@@ -1,0 +1,12 @@
+<div data-sly-list.multifield="${resource.getChildren}">
+
+    <div data-sly-test="${multifield.name == 'multifield'}">
+        <p>multifields:</p>
+
+        <ul data-sly-list.head="${multifield.getChildren}">
+            <li>BGC: ${head.displayByBGC}</li>
+            <li data-sly-test="${head.displayByBGC == 'white'}">Font:${head.displayByFontWhite}</li>
+            <li data-sly-test="${head.displayByBGC == 'black'}">Font:${head.displayByFontBlack}</li>
+         </ul>
+	</div>
+</div>

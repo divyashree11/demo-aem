@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:granite="http://www.adobe.com/jcr/granite/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="nt:unstructured"
+    jcr:title="Properties"
+    sling:resourceType="cq/gui/components/authoring/dialog">
+    <content
+        jcr:primaryType="nt:unstructured"
+        sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns">
+        <items jcr:primaryType="nt:unstructured">
+            <column
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="granite/ui/components/coral/foundation/container">
+                <items jcr:primaryType="nt:unstructured">
+                    <target
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/form/multifield"
+                        composite="{Boolean}true"
+                        fieldLabel="test">
+                        <field
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="granite/ui/components/coral/foundation/container"
+                            name="./multifield">
+                            <items jcr:primaryType="nt:unstructured">
+                                <column
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="granite/ui/components/coral/foundation/container">
+                                    <items jcr:primaryType="nt:unstructured">
+                                        <displayByBGC
+                                            granite:class="cq-dialog-dropdown-showhide-multi"
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="granite/ui/components/coral/foundation/form/select"
+                                            fieldDescription="Select how you want the content to be visualized"
+                                            fieldLabel="Display format"
+                                            name="./displayByBGC">
+                                            <items jcr:primaryType="nt:unstructured">
+                                                <white
+                                                    jcr:primaryType="nt:unstructured"
+                                                    text="White"
+                                                    value="white"/>
+                                                <black
+                                                    jcr:primaryType="nt:unstructured"
+                                                    text="Black"
+                                                    value="black"/>
+                                            </items>
+                                            <granite:data
+                                                jcr:primaryType="nt:unstructured"
+                                                cq-dialog-dropdown-showhide-target=".display-showhide-target"/>
+                                        </displayByBGC>
+                                        <white-container
+                                            granite:class="display-showhide-target"
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns"
+                                            showhidetargetvalue="white">
+                                            <items jcr:primaryType="nt:unstructured">
+                                                <column
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns">
+                                                    <items jcr:primaryType="nt:unstructured">
+                                                        <displayByFontWhite
+                                                            jcr:primaryType="nt:unstructured"
+                                                            sling:resourceType="granite/ui/components/coral/foundation/form/select"
+                                                            fieldDescription="Select how you want the content to be visualized"
+                                                            fieldLabel="Display format"
+                                                            name="./displayByFontWhite">
+                                                            <items jcr:primaryType="nt:unstructured">
+                                                                <green
+                                                                    jcr:primaryType="nt:unstructured"
+                                                                    text="Green"
+                                                                    value="green"/>
+                                                                <grey
+                                                                    jcr:primaryType="nt:unstructured"
+                                                                    text="Grey"
+                                                                    value="grey"/>
+                                                            </items>
+                                                        </displayByFontWhite>
+                                                    </items>
+                                                </column>
+                                            </items>
+                                            <granite:data
+                                                jcr:primaryType="nt:unstructured"
+                                                showhidetargetvalue="white"/>
+                                        </white-container>
+                                        <black-container
+                                            granite:class="display-showhide-target"
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns"
+                                            showhidetargetvalue="black">
+                                            <items jcr:primaryType="nt:unstructured">
+                                                <column
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns">
+                                                    <items jcr:primaryType="nt:unstructured">
+                                                        <displayByFontBlack
+                                                            jcr:primaryType="nt:unstructured"
+                                                            sling:resourceType="granite/ui/components/coral/foundation/form/select"
+                                                            fieldDescription="Select how you want the content to be visualized"
+                                                            fieldLabel="Display format"
+                                                            name="./displayByFontBlack">
+                                                            <items jcr:primaryType="nt:unstructured">
+                                                                <blue
+                                                                    jcr:primaryType="nt:unstructured"
+                                                                    text="Blue"
+                                                                    value="blue"/>
+                                                                <grey
+                                                                    jcr:primaryType="nt:unstructured"
+                                                                    text="Grey"
+                                                                    value="grey"/>
+                                                            </items>
+                                                        </displayByFontBlack>
+                                                    </items>
+                                                </column>
+                                            </items>
+                                            <granite:data
+                                                jcr:primaryType="nt:unstructured"
+                                                showhidetargetvalue="black"/>
+                                        </black-container>
+                                    </items>
+                                </column>
+                            </items>
+                        </field>
+                    </target>
+                </items>
+            </column>
+        </items>
+    </content>
+</jcr:root>
