@@ -23,6 +23,6 @@ jobs:
 
     - name: Build with Maven
       run: mvn clean install
-
-    - name: Run JaCoCo
-      run: mvn jacoco:report
+    
+    - name: Quality Monitor
+      uses: uhafner/quality-monitor@v1.14.0
