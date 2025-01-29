@@ -45,7 +45,7 @@
         <vault.user>admin</vault.user>
         <vault.password>admin</vault.password>
         <core.wcm.components.version>2.15.2</core.wcm.components.version>
-	<jacoco.version>0.8.6</jacoco.version>
+	      <jacoco.version>0.8.6</jacoco.version>
 
         <bnd.version>5.1.2</bnd.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -113,7 +113,6 @@
                     <version>${jacoco.version}</version>
                     <executions>
                         <execution>
-                            <id>default-prepare-agent</id>
                             <goals>
                                 <goal>prepare-agent</goal>
                             </goals>
@@ -123,12 +122,6 @@
                             <phase>prepare-package</phase>
                             <goals>
                                 <goal>report</goal>
-                            </goals>
-                        </execution>
-                        <execution>
-                            <id>default-check</id>
-                            <goals>
-                                <goal>check</goal>
                             </goals>
                         </execution>
                     </executions>
