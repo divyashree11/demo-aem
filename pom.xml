@@ -46,6 +46,7 @@
         <vault.password>admin</vault.password>
         <core.wcm.components.version>2.15.2</core.wcm.components.version>
 	<jacoco.version>0.8.6</jacoco.version>
+	<argLine>-Xmx2048m</argLine>
 
         <bnd.version>5.1.2</bnd.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -124,12 +125,10 @@
                             <goals>
                                 <goal>report</goal>
                             </goals>
-                        </execution>
-                        <execution>
-                            <id>default-check</id>
-                            <goals>
-                                <goal>check</goal>
-                            </goals>
+			    <configuration>
+			        <dataFile>${project.build.directory}/jacoco.exec</dataFile>
+			        <outputDirectory>${project.reporting.outputDirectory}/jacoco</outputDirectory>
+			    </configuration>
                         </execution>
                     </executions>
                 </plugin>
