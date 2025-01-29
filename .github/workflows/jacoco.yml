@@ -21,11 +21,6 @@ jobs:
         run: |
           cd core
           mvn -V --color always -ntp clean verify -Pci
-      - name: Get Pull Request Number
-        id: pr
-        run: echo "::set-output name=pull_request_number::$(gh pr view --json number -q .number || echo "")"
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - name: Run Quality Monitor
         uses: uhafner/quality-monitor@v1
         with:
