@@ -30,4 +30,4 @@ jobs:
         uses: uhafner/quality-monitor@v1
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
-          pr-number: ${{ steps.pr.outputs.pull_request_number }}
+          pr-number: ${{ github.event.pull_request.number }}
